@@ -1,51 +1,31 @@
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  height: 100vh;
   box-sizing: border-box;
-}
-
-body {
+  margin-top: 12vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 5rem; /* Adjust based on navbar height */
 }
-/* navbar */
+
 .navigation-bar {
-  height: 5rem !important;
-  width: 100%;
-  background-color: white;
+  background-color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  position: fixed !important;
-  top: 0px !important;
+  width: 100%;
+
+  border-bottom: 1px solid black;
+  height: 11vh;
+  position: fixed;
+  top: 0px;
   z-index: 1000;
 }
 
-.functions{
-  display: flex;
-  justify-content: center;
-}
-
-.fa-compass {
-  color: #fe424d;
+.navigation-bar .logo a {
   font-size: 2rem;
-}
-
-.options ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.options ul li a {
-  text-decoration: none;
-  color: black;
-  padding-right: 2rem;
+  color: #fe424d;
 }
 
 #destination {
@@ -54,9 +34,10 @@ body {
 
 .fa-magnifying-glass {
   color: #fe424d;
+  font-size: 1.4rem;
 }
 
-.search-box{
+.search-box {
   border: 1px solid black;
   border-radius: 25px !important;
   padding-left: 1rem;
@@ -66,6 +47,70 @@ body {
 .magnify-submit {
   background: none;
   border: none;
+}
+
+.functions ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.functions ul li {
+  list-style-type: none;
+  padding-right: 2vw;
+}
+
+.functions ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.options {
+  display: none;
+}
+
+#sidebar {
+  border: 1px solid #666;
+  background-color: white;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+}
+
+#sidebar ul {
+  padding: 0;
+}
+
+#closebar {
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+#sidebar ul li {
+  padding: 1rem 0;
+  text-align: center;
+  list-style-type: none;
+  padding-right: 2vw;
+}
+
+#sidebar ul li :hover {
+  border: 1px solid #666;
+  box-shadow: #666;
+}
+
+#sidebar ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.open {
+  right: 0px !important;
 }
 
 /* footer */
@@ -79,6 +124,7 @@ footer {
   height: 6rem;
   width: 100%;
   flex-shrink: 0;
+  font-size: 1em;
 }
 
 .social-media a {
@@ -152,6 +198,82 @@ footer {
 
 /* Map */
 #map {
-height: 300px;
-width: 80vh;
+  height: 300px;
+  width: 80vh;
+}
+
+@media (max-width: 700px) {
+  .functions {
+    display: none;
+  }
+  .options {
+    display: block;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+
+  .row {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 90% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+  .col-5 {
+    width: 90% !important;
+    margin: 0 !important;
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+  .col-5 h4{
+    width: 90% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+  .col-5 img{
+    width: 100% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+  .offset-3 {
+    width: 100% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !;
+  }
+
+  .mb-3 {
+    width: 90% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+  .mt-3 {
+    width: 90% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+  #map {
+    height: 20vh !important;
+    width: 80vw !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+
+  }
+  .map-parent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center !important;
+  }
 }

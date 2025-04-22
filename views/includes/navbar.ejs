@@ -14,18 +14,11 @@
     </div>
   </nav> -->
 
-<nav class="navigation-bar">
-  <div class="functions">
-    <div class="logo">
-      <a href="/listings"><i class="fa-regular fa-compass"></i></a>
-    </div>
-    <div class="options">
-      <ul>
-        <li><a href="/listings">Explore</a></li>
-        <li><a href="/listings/new">Airbnb you property</a></li>
-      </ul>
-    </div>
+<!-- <nav class="navigation-bar">
+  <div class="logo">
+    <a href="/listings"><i class="fa-regular fa-compass"></i></a>
   </div>
+  
 
   <div class="search">
     <input
@@ -40,8 +33,75 @@
     </button>
   </div>
 
+  <div class="functions">
+    <div class="options">
+      <ul>
+        <li><a href="/listings">Explore</a></li>
+        <li><a href="/listings/new">Airbnb you property</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="options">
     <ul>
+      <% if (currUser){ %>
+      <li>
+        <a href="/logout"><b>Log out</b></a>
+      </li>
+      <% } %> <% if (!currUser){ %>
+      <li>
+        <a href="/signup"><b>Sign up</b></a>
+      </li>
+      <li>
+        <a href="/login"><b>Log in</b></a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navigation-bar">
+  <div class="logo">
+    <a href="/listings"><i class="fa-regular fa-compass"></i></a>
+  </div>
+  <div class="search">
+    <input
+      class="search-box"
+      type="text"
+      name="destination"
+      id="destination"
+      placeholder="Search Destination"
+    />
+    <button type="submit" class="magnify-submit" id="search-button">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+  <div class="functions">
+    <ul>
+      <li><a href="/listings">Explore</a></li>
+      <li><a href="/listings/new">Airbnb you property</a></li>
+      <% if (currUser){ %>
+      <li>
+        <a href="/logout"><b>Log out</b></a>
+      </li>
+      <% } %> <% if (!currUser){ %>
+      <li>
+        <a href="/signup"><b>Sign up</b></a>
+      </li>
+      <li>
+        <a href="/login"><b>Log in</b></a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="options">
+    <i class="fa-solid fa-bars" id="option-btn"></i>
+  </div>
+  <div id="sidebar" class="abc">
+    <div><i class="fa-solid fa-xmark" id="closebar"></i></div>
+    <ul>
+      <li><a href="/listings">Explore</a></li>
+      <li><a href="/listings/new">Airbnb you property</a></li>
       <% if (currUser){ %>
       <li>
         <a href="/logout"><b>Log out</b></a>
