@@ -26,9 +26,11 @@
 let btn = document.getElementById("search-button");
 btn.addEventListener("click", () => {
   console.log("button clicked");
+  // const destination = document.getElementById("destination").value.trim().charAt(0).toUpperCase();
   const destination = document.getElementById("destination").value.trim();
+  const formattedDestination = destination.charAt(0).toUpperCase() + destination.slice(1).toLowerCase();
   if (destination) {
-    const searchUrl = `/listings/search/${encodeURIComponent(destination)}`;
+    const searchUrl = `/listings/search/${encodeURIComponent(formattedDestination)}`;
     window.location.href = searchUrl;
   } else {
     alert("Please enter a city name.");

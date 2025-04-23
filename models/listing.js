@@ -13,6 +13,7 @@ let listingSchema = new Schema({
     url: String,
     filename: String,
   },
+  category: String,
   price: Number,
   location: String,
   country: String,

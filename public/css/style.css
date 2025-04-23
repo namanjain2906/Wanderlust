@@ -192,8 +192,12 @@ footer {
 
 /* review */
 .review-card {
-  border: 1px solid rgb(222, 226, 230, 1);
+  border: 1px solid rgb(180, 183, 186);
   border-radius: 10px;
+}
+
+#comment {
+  border: 1px solid rgb(180, 183, 186);
 }
 
 /* Map */
@@ -220,24 +224,24 @@ footer {
   }
 
   .card {
-    width: 90% !important;
+    width: 100% !important;
     /* margin: 0 !important; */
     /* padding: 0% !important; */
     align-items: center !important;
   }
   .col-5 {
-    width: 90% !important;
+    width: 100% !important;
     margin: 0 !important;
     /* padding: 0% !important; */
     align-items: center !important;
   }
-  .col-5 h4{
-    width: 90% !important;
+  .col-5 h4 {
+    width: 100% !important;
     /* margin: 0 !important; */
     /* padding: 0% !important; */
     align-items: center !important;
   }
-  .col-5 img{
+  .col-5 img {
     width: 100% !important;
     /* margin: 0 !important; */
     /* padding: 0% !important; */
@@ -247,17 +251,31 @@ footer {
     width: 100% !important;
     /* margin: 0 !important; */
     /* padding: 0% !important; */
-    align-items: center !;
+    align-items: center !important;
+  }
+
+  .offset-4 {
+    width: 100% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+
+  .col-1 {
+    width: 100% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
   }
 
   .mb-3 {
-    width: 90% !important;
+    width: 100% !important;
     /* margin: 0 !important; */
     /* padding: 0% !important; */
     align-items: center !important;
   }
   .mt-3 {
-    width: 90% !important;
+    width: 100% !important;
     /* margin: 0 !important; */
     /* padding: 0% !important; */
     align-items: center !important;
@@ -268,12 +286,36 @@ footer {
     /* margin: 0 !important; */
     /* padding: 0% !important; */
     align-items: center !important;
-
   }
-  .map-parent{
+  .map-parent {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center !important;
+  }
+
+  .col-6 {
+    width: 100% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+
+  .offset-3 {
+    width: 100% !important;
+    /* margin: 0 !important; */
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+
+  .alert {
+    width: 100% !important;
+    margin: 0 !important;
+    /* padding: 0% !important; */
+    align-items: center !important;
+  }
+
+  .row .review-card {
+    margin: 1rem !important;
   }
 }

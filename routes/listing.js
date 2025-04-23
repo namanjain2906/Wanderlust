@@ -43,4 +43,7 @@ router.get(
 // Search route
 router.get("/search/:destination", wrapAsync(listingController.searchListing));
 
+// Category route
+router.get("/category/:clickedId",wrapAsync(listingController.categoryListing))
+
 module.exports = router;

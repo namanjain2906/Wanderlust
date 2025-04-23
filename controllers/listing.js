@@ -40,7 +40,6 @@ module.exports.createListing = async (req, res) => {
   newListing.image = { url, filename };
   newListing.geometry = response.body.features[0].geometry;
   let savedListing = await newListing.save();
-  console.log(savedListing)
   req.flash("success", "New Listing Created!");
   res.redirect("/listings");
 };
@@ -83,6 +82,15 @@ module.exports.searchListing = async (req, res) => {
   let allListings = await Listing.find({ location: destination });
   if (allListings.length === 0) {
     throw new ExpressError(404, "No data available at this location");
+  }
+  res.render("listings/index.ejs", { allListings });
+};
+
+module.exports.categoryListing = async (req, res) => {
+  let { clickedId } = req.params;
+  let allListings = await Listing.find({ category: clickedId });
+  if (allListings.length === 0) {
+    throw new ExpressError(404, "No data available in this category");
   }
   res.render("listings/index.ejs", { allListings });
 };
